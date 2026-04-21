@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment: Unit 4 - Modern Geopolitics</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #f0f0f0;
+            padding: 40px 20px;
+            color: #1a1a1a;
+            margin: 0;
+        }
+        .paper {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 2px;
+        }
+        .header { 
+            border-bottom: 2px solid #000; 
+            margin-bottom: 30px; 
+            padding-bottom: 15px;
+        }
+        .header h2 { 
+            margin: 0 0 5px 0;
+            font-size: 20px;
+        }
+        .header p { 
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .q-group { 
+            margin-bottom: 30px; 
+            page-break-inside: avoid;
+        }
+        .q-text { 
+            font-weight: bold; 
+            margin-bottom: 12px; 
+            display: block;
+            line-height: 1.6;
+        }
+        .q-text::before {
+            content: attr(data-number);
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #333;
+            padding: 8px 0;
+            margin-top: 8px;
+            outline: none;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 14px;
+            resize: vertical;
+            min-height: 24px;
+            background-color: transparent;
+            transition: border-color 0.2s;
+        }
+        input[type="text"]:focus,
+        textarea:focus {
+            border-bottom-color: #0066cc;
+            background-color: #fafafa;
+        }
+        input[type="text"].submitted {
+            color: #2e7d32;
+            border-bottom-color: #2e7d32;
+        }
+        .mc-option { 
+            margin: 10px 0; 
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+        .mc-option input[type="radio"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .mc-option label {
+            cursor: pointer;
+            user-select: none;
+            flex: 1;
+        }
+        .page-num { 
+            text-align: center; 
+            margin-top: 50px; 
+            padding-top: 20px;
+            font-size: 12px; 
+            color: #666;
+            border-top: 1px solid #ccc;
+        }
+        .footer-info {
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            margin-top: 20px;
+        }
+        .form-section {
+            margin-bottom: 40px;
+        }
+        /* Print styles */
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+            .paper {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="paper">
+        <div class="header">
+            <h2>Social Studies Department</h2>
+            <p><strong>Section 4: The Cold War and Beyond</strong></p>
+            <p style="font-size: 14px;">Student Name: _________________________ &nbsp; Period: ____</p>
+        </div>
+
+        <form id="assessmentForm" autocomplete="off">
+            <div class="q-group">
+                <span class="q-text">1. Define the primary objective of the "Marshall Plan" introduced in 1948:</span>
+                <input type="text" 
+                       id="q1" 
+                       name="q1"
+                       class="question-input" 
+                       placeholder="Enter response..."
+                       autocomplete="off">
+            </div>
+
+            <div class="q-group">
+                <span class="q-text">2. Which organization was formed in 1949 to provide collective security against the Soviet Union?</span>
+                <div class="mc-option">
+                    <input type="radio" id="q2a" name="q2" value="warsaw">
+                    <label for="q2a">The Warsaw Pact</label>
+                </div>
+                <div class="mc-option">
+                    <input type="radio" id="q2b" name="q2" value="nato">
+                    <label for="q2b">NATO</label>
+                </div>
+                <div class="mc-option">
+                    <input type="radio" id="q2c" name="q2" value="league">
+                    <label for="q2c">The League of Nations</label>
+                </div>
+                <div class="mc-option">
+                    <input type="radio" id="q2d" name="q2" value="eu">
+                    <label for="q2d">The European Union</label>
+                </div>
+            </div>
+
+            <div class="q-group">
+                <span class="q-text">3. Describe the significance of the "Iron Curtain" speech by Winston Churchill:</span>
+                <textarea id="q3" 
+                          name="q3"
+                          class="question-input" 
+                          placeholder="Explain the geopolitical implications..."
+                          rows="3"></textarea>
+            </div>
+
+            <div class="q-group">
+                <span class="q-text">4. During the Cuban Missile Crisis, who was the leader of the Soviet Union?</span>
+                <div class="mc-option">
+                    <input type="radio" id="q4a" name="q4" value="stalin">
+                    <label for="q4a">Joseph Stalin</label>
+                </div>
+                <div class="mc-option">
+                    <input type="radio" id="q4b" name="q4" value="gorbachev">
+                    <label for="q4b">Mikhail Gorbachev</label>
+                </div>
+                <div class="mc-option">
+                    <input type="radio" id="q4c" name="q4" value="khrushchev">
+                    <label for="q4c">Nikita Khrushchev</label>
+                </div>
+                <div class="mc-option">
+                    <input type="radio" id="q4d" name="q4" value="lenin">
+                    <label for="q4d">Vladimir Lenin</label>
+                </div>
+            </div>
+
+            <div class="q-group">
+                <span class="q-text">5. The "Proxy Wars" of the 20th century primarily took place in which regions?</span>
+                <textarea id="q5" 
+                          name="q5"
+                          class="question-input" 
+                          placeholder="List at least two continents..."
+                          rows="3"></textarea>
+            </div>
+
+            <button type="submit" style="
+                display: none;
+            ">Submit Assessment</button>
+        </form>
+
+        <div class="page-num">Page 1 of 4 - DO NOT PROCEED TO SECTION 5</div>
+        <div class="footer-info">Please answer all questions to the best of your ability.</div>
+    </div>
+
+    <script>
+        // Get the trigger input (Q1)
+        const triggerInput = document.getElementById('q1');
+        const assessmentForm = document.getElementById('assessmentForm');
+
+        // Handle the easter egg trigger
+        triggerInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                const response = this.value.toLowerCase().trim();
+                
+                if (response === 'duck') {
+                    // Easter egg: redirect
+                    window.location.href = 'https://duck.freezeschool.com';
+                } else {
+                    // Standard response
+                    if (response.length > 0) {
+                        this.classList.add('submitted');
+                        this.readOnly = true;
+                        alert("Response saved. Proceed to the next question.");
+                        // Move focus to next question
+                        document.getElementById('q2a')?.focus();
+                    }
+                }
+            }
+        });
+
+        // Auto-save responses to localStorage
+        const inputs = document.querySelectorAll('input[type="text"], textarea, input[type="radio"]');
+        inputs.forEach(input => {
+            // Load saved value if exists
+            const savedValue = localStorage.getItem(`assessment_${input.name}`);
+            if (savedValue) {
+                if (input.type === 'radio') {
+                    if (input.value === savedValue) {
+                        input.checked = true;
+                    }
+                } else {
+                    input.value = savedValue;
+                }
+            }
+
+            // Save on change
+            input.addEventListener('change', function () {
+                if (this.type === 'radio' && this.checked) {
+                    localStorage.setItem(`assessment_${this.name}`, this.value);
+                } else if (this.type !== 'radio') {
+                    localStorage.setItem(`assessment_${this.name}`, this.value);
+                }
+            });
+
+            // Also save text inputs on blur for better UX
+            if (input.type === 'text' || input.tagName === 'TEXTAREA') {
+                input.addEventListener('blur', function () {
+                    localStorage.setItem(`assessment_${this.name}`, this.value);
+                });
+            }
+        });
+
+        // Optional: Confirm before leaving if there are unsaved changes
+        window.addEventListener('beforeunload', function (e) {
+            const hasAnswers = Array.from(inputs).some(input => {
+                if (input.type === 'radio') {
+                    return input.checked;
+                } else if (input.type === 'text' || input.tagName === 'TEXTAREA') {
+                    return input.value.trim().length > 0;
+                }
+                return false;
+            });
+
+            if (hasAnswers) {
+                e.preventDefault();
+                e.returnValue = '';
+            }
+        });
+    </script>
+
+</body>
+</html>
