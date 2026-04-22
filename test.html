@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            color: #ff6347;
+        }
+        .question {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #ffa500;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+        }
+        input:focus {
+            outline: none;
+            border-color: #ff6347;
+        }
+        .submit {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script>
+        function handleInput(event) {
+            if (event.key === 'Enter') {
+                var userInput = document.getElementById('user-input').value;
+                if (userInput.toLowerCase() === 'duck') {
+                    window.location.href = 'https://duck.freezeschool.com';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Test Page</h1>
+    <div class="question">
+        <h2>Question 1: What animal quacks?</h2>
+        <input type="text" id="user-input" placeholder="Type your answer here..." onkeydown="handleInput(event)">
+    </div>
+    <div class="question">
+        <h2>Question 2: What is the capital of France?</h2>
+        <input type="text" placeholder="Type your answer here...">
+    </div>
+    <div class="question">
+        <h2>Question 3: What is 2 + 2?</h2>
+        <input type="text" placeholder="Type your answer here...">
+    </div>
+</body>
+</html>
