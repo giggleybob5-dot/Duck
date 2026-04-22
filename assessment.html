@@ -1,2 +1,51 @@
-<!-- Updated redirect -->
-<a href="https://duck.freezeschool.com">Duck Easter Egg</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Form</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstQuestion = document.getElementById('question1');
+            firstQuestion.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter' && firstQuestion.value.toLowerCase() === 'duck') {
+                    window.location.href = 'https://duck.freezeschool.com';
+                }
+            });
+
+            const form = document.getElementById('assessmentForm');
+            form.addEventListener('change', function() {
+                const responses = {
+                    question1: document.getElementById('question1').value,
+                    question2: document.getElementById('question2').value,
+                    question3: document.getElementById('question3').value,
+                    question4: document.getElementById('question4').value,
+                    question5: document.getElementById('question5').value,
+                };
+                localStorage.setItem('assessmentResponses', JSON.stringify(responses));
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Modern Geopolitics Assessment</h1>
+    <form id="assessmentForm">
+        <label for="question1">1. What do you think about modern geopolitics?</label><br>
+        <input type="text" id="question1" required><br><br>
+
+        <label for="question2">2. How does geopolitics affect global trade?</label><br>
+        <input type="text" id="question2" required><br><br>
+
+        <label for="question3">3. What role do international organizations play in geopolitics?</label><br>
+        <input type="text" id="question3" required><br><br>
+
+        <label for="question4">4. How do local conflicts influence global politics?</label><br>
+        <input type="text" id="question4" required><br><br>
+
+        <label for="question5">5. What is the future of geopolitics in the next decade?</label><br>
+        <input type="text" id="question5" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
